@@ -7,6 +7,8 @@ import java.security.MessageDigest
  */
 fun readInput(name: String) = File("src", "$name.txt").readLines()
 
+fun readInputStr(name: String) = File("src", "$name.txt").readText()
+
 /**
  * Read a text file containing only numbers separated by ","
  */
