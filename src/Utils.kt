@@ -18,3 +18,8 @@ fun readInputNumbers(name: String) = File("src", "$name.txt").readText().split("
  * Converts string to md5 hash.
  */
 fun String.md5(): String = BigInteger(1, MessageDigest.getInstance("MD5").digest(toByteArray())).toString(16)
+
+
+fun <T> List<T>.pairs(): List<Pair<T, T>> =
+    this.indices.flatMap { i -> (i + 1 until this.size).map { j -> this[i] to this[j] } }
+
